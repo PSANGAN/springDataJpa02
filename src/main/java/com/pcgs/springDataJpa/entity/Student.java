@@ -1,10 +1,17 @@
 package com.pcgs.springDataJpa.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.io.Serializable;
 
 @Entity
+@AllArgsConstructor
+@Getter
+@Setter
 public class Student implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -22,10 +29,6 @@ public class Student implements Serializable {
     public Student(String name, String enrollmentId) {
         this.name = name;
         this.enrollmentId = enrollmentId;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     @Override
